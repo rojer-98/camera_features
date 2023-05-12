@@ -1,0 +1,29 @@
+[package]
+name = "camera-features"
+version = "0.1.0"
+authors = ["Ilya Korolev <rojermagnuson98@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pulsar-core = { path = "../core" }
+common = { path = "../common" }
+onvif = { path = "../onvif" }
+digest = { path = "../digest" }
+
+diesel-db = { path = "../diesel-db" }
+domain = { path = "../domain", package = "video-source-domain" }
+
+reqwest = { version = "0.11", features = ["json", "blocking"] }
+serde = { version = "1.0", features = ["derive"] }
+regex = "1.5.4"
+thiserror = "*"
+serde-xml-rs = { git = "ssh://git@gitlab.dev2.sofit:2224/pulsar/serde-xml-rs.git" }
+serde_json = "1"
+serde_url_params = "=0.2.1"
+chrono = { version = "0.4.19", features = ["serde"] }
+xml-rs = "0.8.4"
+atomic_float = "0.1.0"
+async-trait = "^0.1.51"
+utoipa = { version = "3.0.2", features = ["actix_extras"] }
